@@ -14,7 +14,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityWebFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/actuator/**","/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/actuator/**","/swagger-ui/**", "/v3/api-docs/**", "/api/books/**"
+                        ).permitAll()
                         .anyRequest().authenticated())
                 .build();
     }

@@ -40,7 +40,6 @@ public class BookControl {
 
     }
 
-
     @GetMapping("/test")
     public String test() {
         return "Test endpoint fungerar!\n";
